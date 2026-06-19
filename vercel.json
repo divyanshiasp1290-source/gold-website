@@ -3,10 +3,11 @@
   "framework": "tanstack-start",
   "rewrites": [
     {
-      "source": "/((?!api|assets|_next|favicon\\.ico|robots\\.txt|sitemap\\.xml|.*\\..*).*)",
+      "source": "/(.*)",
       "destination": "/"
     }
   ]
+
 }
 
 
