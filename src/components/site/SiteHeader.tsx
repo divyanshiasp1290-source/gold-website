@@ -40,6 +40,17 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
@@ -158,7 +169,7 @@ export function SiteHeader() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-obsidian/95 backdrop-blur-xl lg:hidden"
+            className="fixed inset-0 z-50 min-h-dvh overflow-y-auto overscroll-contain bg-black lg:hidden"
           >
             <div className="container-luxury flex h-20 items-center justify-between">
               <span className="font-display text-xl text-ivory">AURUM</span>
@@ -166,7 +177,7 @@ export function SiteHeader() {
                 <X className="h-6 w-6" />
               </button>
             </div>
-            <nav className="container-luxury mt-8 flex flex-col">
+            <nav className="relative z-10 flex min-h-[calc(100dvh-5rem)] w-full flex-col bg-black px-5 pb-8 pt-2">
               {NAV.map((n) => (
                 <Link
                   key={n.to + n.label}
@@ -177,13 +188,6 @@ export function SiteHeader() {
                   {n.label}
                 </Link>
               ))}
-              <Link
-                to="/contact"
-                onClick={() => setOpen(false)}
-                className="mt-8 bg-gold-gradient px-5 py-4 text-center text-[11px] tracking-[0.28em] uppercase text-obsidian"
-              >
-                Request Consultation
-              </Link>
             </nav>
           </motion.div>
         )}
