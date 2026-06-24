@@ -64,29 +64,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership */}
-      <section className="container-luxury py-32">
-        <SectionHeader eyebrow="Leadership Team" title={<>Stewards of <em className="text-gold-gradient not-italic">institutional</em> capital.</>} />
-        <div className="mt-16 grid gap-px border border-gold/15 bg-gold/15 md:grid-cols-2 lg:grid-cols-4">
-          {[
-            ["Alessandro Vinci", "Chief Executive Officer", "Geneva"],
-            ["Hala Al-Mansoori", "Managing Director, EMEA", "Dubai"],
-            ["Wei Chen", "Head of Asia Trading", "Singapore"],
-            ["Margaret Holloway", "Chief Compliance Officer", "London"],
-          ].map(([n, r, c], i) => (
-            <Reveal key={n} delay={i * 0.05}>
-              <div className="bg-obsidian p-8">
-                <div className="aspect-[3/4] bg-gradient-to-br from-charcoal via-obsidian to-charcoal ring-1 ring-inset ring-gold/20 grid place-items-center">
-                  <span className="font-display text-7xl text-gold/30">{n.split(" ").map(s=>s[0]).join("")}</span>
-                </div>
-                <h3 className="font-display mt-6 text-xl text-ivory">{n}</h3>
-                <div className="mt-1 text-sm text-gold">{r}</div>
-                <div className="mt-1 eyebrow">{c}</div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      
 
       {/* History timeline */}
       <section className="bg-charcoal/30 py-32">

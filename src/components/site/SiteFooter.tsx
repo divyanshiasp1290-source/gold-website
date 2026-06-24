@@ -17,8 +17,7 @@ export function SiteFooter() {
                 <span className="absolute inset-0 grid place-items-center font-display text-lg font-bold text-obsidian">A</span>
               </div>
               <div>
-                <div className="font-display text-xl text-ivory">AURUM GLOBAL METALS</div>
-                <div className="eyebrow text-[9px]">Est. Worldwide</div>
+                <div className="font-display text-xl text-ivory">AQVEST TRADING LIMITED</div>
               </div>
             </div>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
@@ -37,7 +36,8 @@ export function SiteFooter() {
           <div className="lg:col-span-2">
             <div className="eyebrow">Company</div>
             <ul className="mt-5 space-y-3 text-sm text-ivory/75">
-              {[["/about","About"],["/network","Global Network"],["/compliance","Compliance"],["/insights","Insights"],["/faq","FAQ"]].map(([to,l]) => (
+              {[['/','Home'],['/about','About'],['/network','Global Network'],['/products','Products'],['/compliance','Compliance'],['/contact','Contact']].map(([to,l]) => (
+
                 <li key={to}><Link to={to} className="hover:text-gold">{l}</Link></li>
               ))}
             </ul>
@@ -74,17 +74,17 @@ export function SiteFooter() {
             {done && <p className="mt-2 text-xs text-gold">Thank you — confirmation sent.</p>}
 
             <ul className="mt-6 space-y-2 text-sm text-ivory/70">
-              <li className="flex items-center gap-2"><Mail className="h-3.5 w-3.5 text-gold" /> trading@aurumglobal.com</li>
-              <li className="flex items-center gap-2"><Phone className="h-3.5 w-3.5 text-gold" /> +41 22 555 8800</li>
-              <li className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5 text-gold" /> Geneva · Dubai · Singapore · London</li>
+              <li className="flex items-center gap-2"><Mail className="h-3.5 w-3.5 text-gold" /> aquesttradinglimited@gmail.com</li>
+              <li className="flex items-center gap-2"><Phone className="h-3.5 w-3.5 text-gold" /> +232-72-436-895</li>
+              <li className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5 text-gold" /> Freetown, Sierra Leone</li>
             </ul>
           </div>
         </div>
 
         <div className="divider-gold mt-16" />
         <div className="mt-6 flex flex-col items-center justify-between gap-3 text-xs text-muted-foreground md:flex-row">
-          <span>© {new Date().getFullYear()} Aurum Global Metals. All rights reserved.</span>
-          <span className="tracking-[0.24em] uppercase">Bullion · Refining · Trading · Custody</span>
+          <span>© {new Date().getFullYear()} AQVEST TRADING LIMITED. All rights reserved.</span>
+          <span className="tracking-[0.24em] uppercase">Bullion · Trading · Refining · Custody</span>
         </div>
       </div>
     </footer>

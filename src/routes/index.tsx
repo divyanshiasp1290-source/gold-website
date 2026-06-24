@@ -2,22 +2,42 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { Link } from "@tanstack/react-router";
 import {
-  ShieldCheck, Globe2, Scale, Coins, Truck, LineChart, Lock,
-  Factory, Building2, Briefcase, Landmark, Gem, Award, ArrowUpRight,
-  CheckCircle2, FileDown, Phone,
+  ShieldCheck,
+  Globe2,
+  Scale,
+  Coins,
+  Truck,
+  LineChart,
+  Lock,
+  Factory,
+  Building2,
+  Briefcase,
+  Landmark,
+  Gem,
+  Award,
+  ArrowUpRight,
+  CheckCircle2,
+  FileDown,
+  Phone,
 } from "lucide-react";
+
 import heroImg from "@/assets/hero-gold.jpg";
 import worldMap from "@/assets/world-map.jpg";
 import refiningImg from "@/assets/refining.jpg";
 import vaultImg from "@/assets/vault.jpg";
+
 import { Reveal, Counter, SectionHeader, GoldButton } from "@/components/site/Primitives";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aurum Global Metals — Trusted Partner in Gold Trading" },
-      { name: "description", content: "International gold trading, bullion supply, refining and precious metals solutions for institutions and global enterprises." },
-      { property: "og:title", content: "Aurum Global Metals" },
+      { title: "AQVEST TRADING LIMITED — Trusted Precious Metals Partner" },
+      {
+        name: "description",
+        content:
+          "Precious metals trading, bullion supply, refining and custody solutions for institutional clients and global enterprises.",
+      },
+      { property: "og:title", content: "AQVEST TRADING LIMITED" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -40,7 +60,6 @@ function Home() {
       <Network />
       <Compliance />
       <Testimonials />
-      <Insights />
       <CTA />
     </>
   );
@@ -58,37 +77,46 @@ function Hero() {
 
       <div className="container-luxury relative flex min-h-[100vh] flex-col justify-center pt-32 pb-24">
         <motion.p
-          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="eyebrow flex items-center gap-3"
         >
-          <span className="h-px w-10 bg-gold" /> Est. International Bullion House
+          <span className="h-px w-10 bg-gold" /> Est. International Precious Metals House
         </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.15 }}
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.15 }}
           className="font-display mt-6 max-w-5xl text-5xl leading-[1.02] text-ivory md:text-7xl lg:text-8xl"
         >
-          Trusted Global Partner in <span className="shimmer-text italic">Gold Trading</span> & Precious Metals
+          Trusted Global Partner in <span className="shimmer-text italic">Precious Metals</span>
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
           className="mt-8 max-w-2xl text-lg leading-relaxed text-ivory/75 md:text-xl"
         >
           Delivering secure, compliant and reliable precious metal solutions for institutions, wholesalers
-          and global enterprises across five continents.
+          and global enterprises across international corridors.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.45 }}
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.45 }}
           className="mt-12 flex flex-wrap items-center gap-4"
         >
-          <GoldButton to="/contact">Request Consultation</GoldButton>
-          <GoldButton to="/contact" variant="outline">Contact Our Team</GoldButton>
+          <GoldButton to="/contact">Contact Our Team</GoldButton>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.8 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.8 }}
           className="mt-20 grid max-w-3xl grid-cols-2 gap-px border border-gold/15 bg-gold/15 md:grid-cols-4"
         >
           {[
@@ -122,6 +150,7 @@ function Marquee() {
     ["LBMA AM", "2,386.10", "−0.05%"],
     ["LBMA PM", "2,388.95", "+0.12%"],
   ];
+
   return (
     <section className="border-y border-gold/15 bg-charcoal/40 py-4 overflow-hidden">
       <motion.div
@@ -148,29 +177,31 @@ function Intro() {
       <div className="grid gap-16 lg:grid-cols-12 lg:gap-24">
         <div className="lg:col-span-5">
           <Reveal>
-            <p className="eyebrow flex items-center gap-3"><span className="h-px w-8 bg-gold" /> About Aurum</p>
+            <p className="eyebrow flex items-center gap-3">
+              <span className="h-px w-8 bg-gold" /> About AQVEST
+            </p>
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="font-display mt-5 text-4xl leading-[1.05] text-ivory md:text-6xl">
-              A House Built on <em className="text-gold-gradient not-italic">Discretion</em>, Trust, and Pure Gold.
+              A House Built on <em className="text-gold-gradient not-italic">Discretion</em>, Trust, and Pure
+              Precious Metals.
             </h2>
           </Reveal>
         </div>
         <div className="lg:col-span-7 lg:pt-10">
           <Reveal delay={0.1}>
             <p className="text-lg leading-relaxed text-ivory/80">
-              Aurum Global Metals is an international bullion house and commodities trading firm specializing in the
-              sourcing, refining, custody and distribution of investment-grade precious metals. We serve central banks,
-              sovereign institutions, refineries, jewellery manufacturers and family offices through a network of
-              vaults and trading desks spanning four continents.
+              AQVEST TRADING LIMITED is an international precious metals partner specializing in the sourcing,
+              refining, custody and distribution of investment-grade metals. We serve institutions and global
+              enterprises through a network of trading desks and vault partners.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-10 grid grid-cols-1 gap-px border border-gold/15 bg-gold/15 sm:grid-cols-3">
               {[
-                ["1992", "Founded in Geneva"],
+                ["1992", "Founded"],
                 ["28+", "Years of execution"],
-                ["$14B", "Annual trade volume"],
+                ["High-volume", "Annual trading capability"],
               ].map(([a, b]) => (
                 <div key={a} className="bg-obsidian p-6">
                   <div className="font-display text-3xl text-gold-gradient">{a}</div>
@@ -187,30 +218,70 @@ function Intro() {
 
 /* ---------- SERVICES ---------- */
 const SERVICES = [
-  { icon: Coins, t: "International Gold Trading", d: "Physical spot, forward and structured bullion transactions across global markets with full settlement transparency." },
-  { icon: Gem,   t: "Precious Metal Sourcing",    d: "Responsibly sourced gold, silver, platinum and palladium from accredited mines and refiners worldwide." },
-  { icon: Factory, t: "Refining Solutions",       d: "End-to-end refining via LBMA Good Delivery partners producing 999.9 fine investment-grade bullion." },
-  { icon: Truck, t: "Logistics & Distribution",   d: "Fully insured Brink's-grade worldwide secure transport with bonded customs handling." },
-  { icon: Lock,  t: "Secure Vault Storage",       d: "Allocated and segregated custody at Tier-1 vaults in Zürich, Singapore, Dubai and Delaware." },
-  { icon: LineChart, t: "Risk Management",        d: "Forward hedging, price-fix strategies and treasury solutions for industrial and institutional clients." },
+  {
+    icon: Coins,
+    t: "Trading Precious Minerals & Commodities",
+    d: "We deal and trade in precious minerals, commodities and general merchandise with trusted execution across cross-border routes.",
+  },
+  {
+    icon: Gem,
+    t: "Precious Metal Sourcing",
+    d: "Responsibly sourced metals from accredited mines and refiners worldwide with chain-of-custody documentation.",
+  },
+  {
+    icon: Factory,
+    t: "Refining Solutions",
+    d: "End-to-end refining via accredited partners producing investment-grade fineness with assay certification.",
+  },
+  {
+    icon: Truck,
+    t: "Logistics & Distribution",
+    d: "Fully insured secure transport with bonded customs handling and chain-of-custody audit.",
+  },
+  {
+    icon: Lock,
+    t: "Secure Vault Storage",
+    d: "Allocated and segregated custody at tier facilities across international hubs.",
+  },
+  {
+    icon: LineChart,
+    t: "Risk Management",
+    d: "Forward hedging, price-fix strategies and treasury solutions for industrial and institutional clients.",
+  },
 ];
+
 function Services() {
   return (
     <section id="services" className="relative bg-charcoal/30 py-32">
       <div className="container-luxury">
-        <SectionHeader eyebrow="Our Services" title={<>Precious Metals <em className="text-gold-gradient not-italic">Solutions</em>, Engineered for Institutions.</>}
-          description="A comprehensive, vertically-integrated suite of services across the entire precious metals value chain." />
+        <SectionHeader
+          eyebrow="Our Services"
+          title={
+            <>
+              Precious Metals <em className="text-gold-gradient not-italic">Solutions</em>, Engineered for Institutions.
+            </>
+          }
+          description="A comprehensive, vertically-integrated suite across the precious metals value chain."
+        />
         <div className="mt-16 grid gap-px border border-gold/15 bg-gold/15 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => (
             <Reveal key={s.t} delay={i * 0.05}>
               <div className="group relative h-full overflow-hidden bg-obsidian p-10 transition-colors hover:bg-charcoal">
-                <s.icon className="h-9 w-9 text-gold transition-transform group-hover:-translate-y-1" strokeWidth={1.2} />
+                <s.icon
+                  className="h-9 w-9 text-gold transition-transform group-hover:-translate-y-1"
+                  strokeWidth={1.2}
+                />
                 <h3 className="font-display mt-8 text-2xl text-ivory">{s.t}</h3>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{s.d}</p>
-                <Link to="/services" className="mt-8 inline-flex items-center gap-2 text-[11px] tracking-[0.28em] uppercase text-gold opacity-0 transition group-hover:opacity-100">
+                <Link
+                  to="/services"
+                  className="mt-8 inline-flex items-center gap-2 text-[11px] tracking-[0.28em] uppercase text-gold opacity-0 transition group-hover:opacity-100"
+                >
                   Discover <ArrowUpRight className="h-3 w-3" />
                 </Link>
-                <div className="pointer-events-none absolute right-6 top-6 font-display text-5xl text-gold/10">0{i + 1}</div>
+                <div className="pointer-events-none absolute right-6 top-6 font-display text-5xl text-gold/10">
+                  0{i + 1}
+                </div>
               </div>
             </Reveal>
           ))}
@@ -228,6 +299,7 @@ function Stats() {
     { v: 480, s: "+", l: "Institutional Clients" },
     { v: 99.99, s: "%", l: "Bullion Purity Standard" },
   ];
+
   return (
     <section className="relative overflow-hidden py-32">
       <div className="absolute inset-0 -z-10 opacity-30">
@@ -236,8 +308,8 @@ function Stats() {
       </div>
       <div className="container-luxury">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((s, i) => (
-            <Reveal key={s.l} delay={i * 0.08}>
+          {stats.map((s) => (
+            <Reveal key={s.l}>
               <div className="border-t border-gold/30 pt-8">
                 <div className="font-display text-6xl text-gold-gradient md:text-7xl">
                   <Counter to={s.v} suffix={s.s} />
@@ -269,12 +341,19 @@ function Solutions() {
           </div>
         </Reveal>
         <div>
-          <SectionHeader eyebrow="Capabilities" title={<>From the mine, to the vault, to the <em className="text-gold-gradient not-italic">balance sheet</em>.</>}
-            description="Our integrated capability stack means a single accountable partner across every link of the precious metals chain." />
+          <SectionHeader
+            eyebrow="Capabilities"
+            title={
+              <>
+                From the mine, to the vault, to the <em className="text-gold-gradient not-italic">balance sheet</em>.
+              </>
+            }
+            description="Our integrated capability stack means a single accountable partner across every link of the precious metals chain."
+          />
           <div className="mt-10 space-y-5">
-            {[
-              "Sourcing from LBMA-accredited mines & refiners",
-              "Assay, refining and minting to 999.9 fineness",
+            {[ 
+              "Sourcing from accredited mines & refiners",
+              "Assay, refining and minting to high fineness",
               "Allocated, segregated and pooled vault custody",
               "Insured global logistics with chain-of-custody audit",
               "Treasury hedging and structured price products",
@@ -297,18 +376,27 @@ function Solutions() {
 function WhyUs() {
   const items = [
     { icon: ShieldCheck, t: "Trust & Discretion", d: "Banking-grade confidentiality and ironclad chain-of-custody." },
-    { icon: Globe2, t: "Global Reach", d: "Trading desks across Geneva, Dubai, Singapore, London and New York." },
-    { icon: Scale, t: "Regulatory Excellence", d: "Aligned with LBMA, OECD, AML5 and full institutional KYC." },
-    { icon: Award, t: "Pricing Integrity", d: "Transparent execution on LBMA, COMEX and Shanghai benchmarks." },
+    { icon: Globe2, t: "Global Reach", d: "Coverage across international trading and custody corridors." },
+    { icon: Scale, t: "Regulatory Excellence", d: "Aligned with institutional compliance expectations for KYC and AML." },
+    { icon: Award, t: "Pricing Integrity", d: "Transparent execution on key reference benchmarks." },
   ];
+
   return (
     <section className="relative bg-charcoal/30 py-32">
       <div className="container-luxury">
-        <SectionHeader align="center" eyebrow="Why Aurum" title={<>An Uncompromising Standard.</>}
-          description="What sets a 28-year-old international bullion house apart from the rest." />
+        <SectionHeader
+          align="center"
+          eyebrow="Why AQVEST"
+          title={
+            <>
+              An Uncompromising Standard.
+            </>
+          }
+          description="Built for institutional mandates and confidential private enquiries."
+        />
         <div className="mt-20 grid gap-px border border-gold/15 bg-gold/15 md:grid-cols-2 lg:grid-cols-4">
-          {items.map((it, i) => (
-            <Reveal key={it.t} delay={i * 0.05}>
+          {items.map((it) => (
+            <Reveal key={it.t}>
               <div className="bg-obsidian p-10 text-center">
                 <it.icon className="mx-auto h-10 w-10 text-gold" strokeWidth={1.2} />
                 <h3 className="font-display mt-6 text-xl text-ivory">{it.t}</h3>
@@ -326,16 +414,17 @@ function WhyUs() {
 function Process() {
   const steps = [
     ["01", "Mandate & KYC", "Institutional onboarding, compliance review and counterparty verification."],
-    ["02", "Sourcing & Pricing", "Live LBMA / COMEX referencing with locked-in spread quotations."],
-    ["03", "Refining & Assay", "999.9 fine bar production with full assay certification."],
-    ["04", "Custody & Settlement", "Allocated vault delivery, DvP settlement and audit trail."],
+    ["02", "Sourcing & Pricing", "Live benchmark referencing with structured quotation formats."],
+    ["03", "Refining & Assay", "Investment-grade production with assay certification."],
+    ["04", "Custody & Settlement", "Allocated delivery, DvP settlement and audit trail."],
   ];
+
   return (
     <section className="container-luxury py-32">
       <SectionHeader eyebrow="Trading Process" title={<>Four steps. <em className="text-gold-gradient not-italic">Zero ambiguity.</em></>} />
       <div className="mt-16 grid gap-px border border-gold/15 bg-gold/15 md:grid-cols-2 lg:grid-cols-4">
-        {steps.map(([n, t, d], i) => (
-          <Reveal key={n} delay={i * 0.06}>
+        {steps.map(([n, t, d]) => (
+          <Reveal key={n}>
             <div className="relative h-full bg-obsidian p-10">
               <div className="font-display text-7xl text-gold/15">{n}</div>
               <h3 className="font-display mt-6 text-2xl text-ivory">{t}</h3>
@@ -360,13 +449,21 @@ function Industries() {
     { icon: ShieldCheck, t: "Family Offices" },
     { icon: Globe2, t: "Government Agencies" },
   ];
+
   return (
     <section className="bg-charcoal/30 py-32">
       <div className="container-luxury">
-        <SectionHeader eyebrow="Industries We Serve" title={<>Counterparty to the world's <em className="text-gold-gradient not-italic">most discerning</em> institutions.</>} />
+        <SectionHeader
+          eyebrow="Industries We Serve"
+          title={
+            <>
+              Counterparty to the world's <em className="text-gold-gradient not-italic">most discerning</em> institutions.
+            </>
+          }
+        />
         <div className="mt-16 grid gap-px border border-gold/15 bg-gold/15 sm:grid-cols-2 md:grid-cols-4">
-          {inds.map((i, idx) => (
-            <Reveal key={i.t} delay={idx * 0.04}>
+          {inds.map((i) => (
+            <Reveal key={i.t}>
               <div className="group bg-obsidian p-8 transition-colors hover:bg-charcoal">
                 <i.icon className="h-7 w-7 text-gold" strokeWidth={1.2} />
                 <h3 className="mt-6 text-lg text-ivory">{i.t}</h3>
@@ -383,35 +480,48 @@ function Industries() {
 /* ---------- NETWORK ---------- */
 function Network() {
   const hubs = [
-    ["Geneva", "Global HQ"],
-    ["London", "Trading Desk"],
-    ["Dubai", "Bullion Hub"],
-    ["Singapore", "Asia Custody"],
-    ["Hong Kong", "Asia Trading"],
-    ["New York", "Americas"],
-    ["Zürich", "Refining"],
-    ["Mumbai", "Distribution"],
+    { c: "Geneva", t: "Quai du Mont-Blanc", d: "Secure custody and institutional execution." },
+    { c: "Dubai", t: "Trade & Settlement Desk", d: "Precious minerals trading, settlement support, and corridor coordination." },
+    { c: "Singapore", t: "Marina Bay Hub", d: "Refining oversight and settlement support." },
+    { c: "London", t: "King William Street", d: "Compliant execution across international corridors." },
+    { c: "Zurich", t: "Zürich Refineries Corridor", d: "Assay visibility and custody coordination." },
+    { c: "New York", t: "Wall Street Trading Desk", d: "Settlement coordination for North American mandates." },
   ];
+
+
   return (
-    <section className="relative overflow-hidden py-32">
-      <div className="absolute inset-0 -z-10 opacity-50">
-        <img src={worldMap} alt="" className="h-full w-full object-cover" loading="lazy" />
-        <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/60 to-obsidian" />
-      </div>
+    <section className="bg-charcoal/30 py-32">
       <div className="container-luxury">
-        <SectionHeader align="center" eyebrow="Global Network" title={<>Four continents. <em className="text-gold-gradient not-italic">One desk.</em></>}
-          description="Continuous coverage across the world's leading bullion centres." />
-        <div className="mt-20 grid grid-cols-2 gap-px border border-gold/15 bg-gold/15 md:grid-cols-4">
-          {hubs.map((h, i) => (
-            <Reveal key={h[0]} delay={i * 0.04}>
-              <div className="bg-obsidian/90 p-6 backdrop-blur">
-                <div className="flex items-center gap-2 text-gold"><span className="inline-block h-2 w-2 animate-pulse-gold rounded-full bg-gold" /><span className="eyebrow">Live</span></div>
-                <div className="font-display mt-3 text-2xl text-ivory">{h[0]}</div>
-                <div className="mt-1 text-xs text-muted-foreground">{h[1]}</div>
-              </div>
+        <SectionHeader
+          eyebrow="Global Network"
+          title={
+            <>
+              Desks in <em className="text-gold-gradient not-italic">key</em> financial hubs.
+            </>
+          }
+          description="We deal and trade in precious minerals, commodities and general merchandise. We finance gold mining villages and communities, and facilitate the purchase and sale of their gold winnings—supported by logistics and trading routes across Sierra Leone and neighbouring ECOWAS Member States." 
+        />
+
+        <div className="mt-16 grid gap-px border border-gold/15 bg-gold/15 md:grid-cols-3">
+          {hubs.map((p, i) => (
+            <Reveal key={p.t} delay={i * 0.06}>
+              <article className="group flex h-full flex-col bg-obsidian p-10">
+                <div className="eyebrow">{p.c}</div>
+                <h3 className="font-display mt-4 text-2xl leading-tight text-ivory transition-colors group-hover:text-gold">{p.t}</h3>
+                <div className="mt-auto flex items-center justify-between border-t border-gold/15 pt-6 text-xs text-muted-foreground">
+                  <span>{p.d}</span>
+                  <a
+                    href="/network"
+                    className="inline-flex items-center gap-2 text-[11px] tracking-[0.28em] uppercase text-gold/90 hover:text-gold"
+                  >
+                    Discover <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </article>
             </Reveal>
           ))}
         </div>
+
       </div>
     </section>
   );
@@ -419,22 +529,39 @@ function Network() {
 
 /* ---------- COMPLIANCE ---------- */
 function Compliance() {
-  const certs = ["LBMA Aligned", "OECD Due Diligence", "ISO 9001:2015", "Responsible Gold", "AML5 / KYC", "Dubai DMCC"];
+  const pillars = [
+    "Counterparty verification and ongoing KYC monitoring",
+    "AML screening across international settlement corridors",
+    "Chain-of-custody documentation for physical metal movements",
+    "Insured logistics with audit-ready transfer records",
+  ];
+
   return (
     <section className="container-luxury py-32">
-      <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-        <SectionHeader eyebrow="Certifications & Compliance"
-          title={<>Held to the standard of the world's <em className="text-gold-gradient not-italic">central banks</em>.</>}
-          description="We operate under the strictest international compliance frameworks for responsible sourcing, AML and counterparty integrity." />
-        <Reveal>
-          <div className="grid grid-cols-2 gap-px border border-gold/15 bg-gold/15">
-            {certs.map((c) => (
-              <div key={c} className="flex h-32 items-center justify-center bg-obsidian p-6 text-center">
-                <span className="eyebrow text-gold/90">{c}</span>
-              </div>
+      <div className="grid gap-14 lg:grid-cols-12 lg:items-start">
+        <div className="lg:col-span-5">
+          <SectionHeader
+            eyebrow="Compliance"
+            title={
+              <>
+                Governed for <em className="text-gold-gradient not-italic">institutional</em> confidence.
+              </>
+            }
+            description="Every mandate is structured around documented custody, responsible sourcing, and transparent settlement controls."
+          />
+        </div>
+        <div className="lg:col-span-7">
+          <div className="grid gap-px border border-gold/15 bg-gold/15 sm:grid-cols-2">
+            {pillars.map((pillar, i) => (
+              <Reveal key={pillar} delay={i * 0.05}>
+                <div className="h-full bg-obsidian p-8">
+                  <ShieldCheck className="h-7 w-7 text-gold" strokeWidth={1.3} />
+                  <p className="mt-6 text-sm leading-relaxed text-ivory/80">{pillar}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );
@@ -442,24 +569,39 @@ function Compliance() {
 
 /* ---------- TESTIMONIALS ---------- */
 function Testimonials() {
-  const items = [
-    { q: "Aurum's execution discipline and vault transparency set a benchmark for our treasury operations.", a: "Head of Treasury", o: "European Private Bank" },
-    { q: "Five years of flawless settlement. Their refining partners are the gold standard, literally.", a: "Managing Director", o: "GCC Investment House" },
-    { q: "We trust Aurum with allocated custody for nine-figure positions. No other counterparty compares.", a: "CIO", o: "Asian Family Office" },
+  const quotes = [
+    {
+      q: "AQVEST gives us responsive execution, clear documentation, and quiet professionalism across complex cross-border trades.",
+      a: "Procurement Director",
+      c: "Industrial Metals Group",
+    },
+    {
+      q: "Their custody and logistics coordination has become a reliable extension of our treasury workflow.",
+      a: "Head of Treasury",
+      c: "Private Investment Office",
+    },
   ];
+
   return (
     <section className="bg-charcoal/30 py-32">
       <div className="container-luxury">
-        <SectionHeader eyebrow="Client Testimonials" title={<>The word of those we <em className="text-gold-gradient not-italic">serve.</em></>} />
-        <div className="mt-16 grid gap-8 lg:grid-cols-3">
-          {items.map((t, i) => (
-            <Reveal key={i} delay={i * 0.08}>
-              <figure className="flex h-full flex-col border border-gold/15 bg-obsidian p-10">
-                <div className="font-display text-6xl leading-none text-gold/40">“</div>
-                <blockquote className="mt-4 flex-1 text-lg leading-relaxed text-ivory/90">{t.q}</blockquote>
-                <figcaption className="mt-8 border-t border-gold/15 pt-5">
-                  <div className="text-sm text-ivory">{t.a}</div>
-                  <div className="eyebrow mt-1">{t.o}</div>
+        <SectionHeader
+          align="center"
+          eyebrow="Client Trust"
+          title={
+            <>
+              Quiet execution. <em className="text-gold-gradient not-italic">Documented</em> results.
+            </>
+          }
+        />
+        <div className="mt-16 grid gap-px border border-gold/15 bg-gold/15 md:grid-cols-2">
+          {quotes.map((quote, i) => (
+            <Reveal key={quote.a} delay={i * 0.08}>
+              <figure className="h-full bg-obsidian p-10">
+                <blockquote className="font-display text-2xl leading-snug text-ivory">"{quote.q}"</blockquote>
+                <figcaption className="mt-8 border-t border-gold/15 pt-6">
+                  <div className="text-sm text-gold">{quote.a}</div>
+                  <div className="mt-1 text-xs tracking-[0.2em] uppercase text-muted-foreground">{quote.c}</div>
                 </figcaption>
               </figure>
             </Reveal>
@@ -469,38 +611,6 @@ function Testimonials() {
     </section>
   );
 }
-
-/* ---------- INSIGHTS ---------- */
-function Insights() {
-  const posts = [
-    { t: "Gold's Role in the Post-Dollar Reserve Era", c: "Market Analysis", d: "12 min read" },
-    { t: "How Central Banks Are Reshaping Demand in 2025", c: "Macro", d: "8 min read" },
-    { t: "The Quiet Revolution in Responsible Sourcing", c: "Compliance", d: "10 min read" },
-  ];
-  return (
-    <section className="container-luxury py-32">
-      <div className="flex flex-wrap items-end justify-between gap-8">
-        <SectionHeader eyebrow="Latest Market Insights" title={<>Intelligence for the <em className="text-gold-gradient not-italic">institutional</em> investor.</>} />
-        <GoldButton to="/insights" variant="outline">View All</GoldButton>
-      </div>
-      <div className="mt-16 grid gap-px border border-gold/15 bg-gold/15 md:grid-cols-3">
-        {posts.map((p, i) => (
-          <Reveal key={p.t} delay={i * 0.06}>
-            <article className="group flex h-full flex-col bg-obsidian p-10">
-              <div className="eyebrow">{p.c}</div>
-              <h3 className="font-display mt-4 text-2xl leading-tight text-ivory transition-colors group-hover:text-gold">{p.t}</h3>
-              <div className="mt-auto flex items-center justify-between border-t border-gold/15 pt-6 text-xs text-muted-foreground">
-                <span>{p.d}</span>
-                <ArrowUpRight className="h-4 w-4 text-gold" />
-              </div>
-            </article>
-          </Reveal>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 /* ---------- CTA ---------- */
 function CTA() {
   return (
@@ -524,8 +634,8 @@ function CTA() {
               <a href="#" className="inline-flex items-center gap-2 text-xs tracking-[0.28em] uppercase text-gold/90 hover:text-gold">
                 <FileDown className="h-4 w-4" /> Download Company Profile
               </a>
-              <a href="tel:+41225558800" className="inline-flex items-center gap-2 text-xs tracking-[0.28em] uppercase text-ivory/70 hover:text-gold">
-                <Phone className="h-4 w-4" /> +41 22 555 8800
+              <a href="tel:+23272436895" className="inline-flex items-center gap-2 text-xs tracking-[0.28em] uppercase text-ivory/70 hover:text-gold">
+                <Phone className="h-4 w-4" /> +23272436895
               </a>
             </div>
           </div>

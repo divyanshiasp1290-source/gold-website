@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import { WhatsAppChatIcon } from "@/components/site/WhatsAppChatIcon";
 
 function NotFoundComponent() {
   return (
@@ -64,11 +65,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Aurum Global Metals — International Gold Trading & Precious Metals" },
-      { name: "description", content: "Aurum Global Metals is a trusted international partner in gold trading, bullion supply, refining and precious metals solutions for institutions, banks and global enterprises." },
-      { name: "author", content: "Aurum Global Metals" },
-      { property: "og:site_name", content: "Aurum Global Metals" },
-      { property: "og:title", content: "Aurum Global Metals — Trusted Global Partner in Gold Trading" },
+      { title: "AQVEST TRADING LIMITED" },
+      { name: "description", content: "AQVEST TRADING LIMITED is a trusted international partner in precious metals trading, bullion supply, refining and custody solutions for institutions, banks and global enterprises." },
+      { name: "author", content: "AQVEST TRADING LIMITED" },
+      { property: "og:site_name", content: "AQVEST TRADING LIMITED" },
+      { property: "og:title", content: "AQVEST TRADING LIMITED" },
       { property: "og:description", content: "Secure, compliant precious metals solutions for institutions, wholesalers and global enterprises." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -77,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       // Prevent browser from requesting missing favicon/manifest files.
       // (Vercel will otherwise log 404s for /favicon.ico)
       { rel: "icon", href: "data:;base64,", type: "image/x-icon" },
-      { rel: "manifest", href: "data:;base64," },
+      { rel: "manifest", href: "data:application/manifest+json,%7B%22name%22%3A%22AQVEST%20TRADING%20LIMITED%22%2C%22short_name%22%3A%22AQVEST%22%2C%22start_url%22%3A%22%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23070604%22%2C%22theme_color%22%3A%22%23c99a2e%22%7D" },
       { rel: "stylesheet", href: appCss },
 
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -90,8 +91,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Aurum Global Metals",
-          description: "International gold trading, bullion supply, refining and precious metals solutions.",
+          name: "AQVEST TRADING LIMITED",
+          description: "International precious metals trading, bullion supply, refining and custody solutions.",
           areaServed: "Worldwide",
         }),
       },
@@ -126,6 +127,7 @@ function RootComponent() {
         <main>
           <Outlet />
         </main>
+        <WhatsAppChatIcon />
         <SiteFooter />
       </div>
     </QueryClientProvider>

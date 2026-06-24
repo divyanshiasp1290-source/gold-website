@@ -1,42 +1,39 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal, SectionHeader, GoldButton } from "@/components/site/Primitives";
-import goldBar from "@/assets/gold-bar.jpg";
-import goldCoins from "@/assets/gold-coins.jpg";
-import heroGold from "@/assets/hero-gold.jpg";
-import refining from "@/assets/refining.jpg";
+import heroImg from "@/assets/gold bars.jpeg";
+import productBars from "@/assets/gold bar bulk.jpeg";
+import productBullion from "@/assets/silver bar.jpeg";
+
+import productRefining from "@/assets/Refined Gold.jpeg";
+import productPrecious from "@/assets/Precious Metals.jpeg";
+import productBarsBulk from "@/assets/gold bars.jpeg";
 
 const PRODUCTS = [
   {
     name: "Gold Bars",
-    img: heroGold,
-    desc: "LBMA Good Delivery gold bars in 400 oz, 1 kg, 100 g and 1 oz formats for institutional treasuries and wholesale distribution.",
+    img: productBarsBulk,
+
+    desc: "LBMA-style gold bars in institutional and wholesale formats — designed for allocated custody, settlement efficiency and wholesale distribution.",
     purity: "999.9 ‰",
     specs: ["400 oz / 12.4 kg London Good Delivery","1 kg cast & minted","100 g, 1 oz minted bars","Refiner-branded & custom hallmark"],
     apps: ["Central bank reserves","Institutional treasury","Wholesale distribution","ETF backing"],
     supply: "Continuous supply via Tier-1 Swiss refining partners. Minimum order 5 kg.",
   },
   {
-    name: "Gold Bullion",
-    img: goldBar,
+    name: "Silver Bars",
+    img: productBullion,
+
     desc: "Investment-grade bullion in cast and minted formats, certified, serialised and assay-sealed.",
     purity: "999.9 ‰",
     specs: ["Cast & minted","Tamper-evident assay","Serialised certification","Refiner-traceable"],
     apps: ["Wealth preservation","Allocated vault holdings","Collateralised lending","Family office reserves"],
     supply: "Available ex-vault from Zürich, Singapore, Dubai and Delaware.",
   },
-  {
-    name: "Gold Coins",
-    img: goldCoins,
-    desc: "Sovereign-issued legal-tender bullion coins from the world's leading mints.",
-    purity: "999.9 ‰ / 916.7 ‰",
-    specs: ["1 oz, ½ oz, ¼ oz, 1/10 oz","Government mint origin","Sealed mint tubes","Monster boxes available"],
-    apps: ["Retail distribution","Numismatic resale","Wealth gifting","Liquid bullion reserves"],
-    supply: "Krugerrand, Maple, Britannia, Eagle, Philharmonic, Kangaroo and others.",
-  },
+
   {
     name: "Refined Gold",
-    img: refining,
+    img: productRefining,
     desc: "Bespoke refining of mined doré, scrap and recycled gold to investment-grade fineness with full assay certification.",
     purity: "Up to 999.9 ‰",
     specs: ["Doré refining","Scrap & recycled","Assay & analysis","Custom bar branding"],
@@ -45,7 +42,7 @@ const PRODUCTS = [
   },
   {
     name: "Precious Metals",
-    img: heroGold,
+    img: productPrecious,
     desc: "Beyond gold — silver, platinum and palladium in industrial and investment formats.",
     purity: "999 ‰ Ag · 999.5 ‰ Pt/Pd",
     specs: ["Silver 1000 oz bars","Platinum 1 kg bars","Palladium ingots","ETF-grade lots"],
@@ -54,7 +51,7 @@ const PRODUCTS = [
   },
   {
     name: "Investment-Grade Gold",
-    img: goldBar,
+    img: productBars,
     desc: "VAT-free investment gold meeting all qualifying standards for institutional and high-net-worth allocations.",
     purity: "≥ 995 ‰",
     specs: ["VAT-exempt EU","HMRC qualifying","Allocated custody","Cross-border DvP"],
@@ -66,8 +63,8 @@ const PRODUCTS = [
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "Products — Aurum Global Metals" },
-      { name: "description", content: "Investment-grade gold bars, bullion, coins, refined gold and precious metals supplied to institutional clients." },
+      { title: "Products — AQVEST TRADING LIMITED" },
+      { name: "description", content: "Investment-grade precious metal bars, bullion, coins, refined products and custody solutions supplied to institutional clients." },
       { property: "og:title", content: "Precious Metals Products" },
       { property: "og:url", content: "/products" },
     ],
@@ -81,9 +78,9 @@ function ProductsPage() {
     <>
       <PageHero
         eyebrow="Products"
-        title={<>Bullion, bars and coins — <em className="text-gold-gradient not-italic">curated</em> for institutional supply.</>}
-        description="Informational catalogue of Aurum's precious metal product capabilities. All transactions are conducted via private mandate."
-        image={heroGold}
+        title={<>Bars and refining solutions — <em className="text-gold-gradient not-italic">curated</em> for institutional supply.</>}
+        description="Informational catalogue of AQVEST TRADING LIMITED precious metal product capabilities. All transactions are handled via a confidential private mandate."
+        image={heroImg}
       />
       <section className="container-luxury py-24">
         <div className="space-y-24">
@@ -123,7 +120,7 @@ function ProductsPage() {
       <section className="bg-charcoal/30 py-24">
         <div className="container-luxury text-center">
           <SectionHeader align="center" eyebrow="Private Mandate" title={<>All transactions handled <em className="text-gold-gradient not-italic">privately.</em></>}
-            description="This page is informational. Aurum does not transact through e-commerce — every order is structured as a confidential institutional mandate." />
+            description="This page is informational. AQVEST TRADING LIMITED does not transact through e-commerce — every order is structured as a confidential institutional mandate." />
           <div className="mt-10"><GoldButton to="/contact">Open an Enquiry</GoldButton></div>
         </div>
       </section>

@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, ChevronDown, Globe } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -22,16 +22,13 @@ const NAV = [
   { to: "/industries", label: "Industries" },
   { to: "/network", label: "Network" },
   { to: "/compliance", label: "Compliance" },
-  { to: "/insights", label: "Insights" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [mega, setMega] = useState(false);
-  const [lang, setLang] = useState("EN");
-  const [langOpen, setLangOpen] = useState(false);
+  const [megaOpen, setMegaOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -45,7 +42,6 @@ export function SiteHeader() {
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-
     return () => {
       document.body.style.overflow = previousOverflow;
     };
@@ -54,9 +50,7 @@ export function SiteHeader() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "border-b border-gold/15 bg-obsidian/85 backdrop-blur-xl"
-          : "bg-transparent"
+        scrolled ? "border-b border-gold/15 bg-obsidian/85 backdrop-blur-xl" : "bg-transparent"
       }`}
     >
       <div className="container-luxury">
@@ -65,11 +59,14 @@ export function SiteHeader() {
             <div className="relative h-10 w-10">
               <div className="absolute inset-0 rotate-45 border border-gold/60" />
               <div className="absolute inset-1.5 rotate-45 bg-gold-gradient" />
-              <span className="absolute inset-0 grid place-items-center font-display text-lg font-bold text-obsidian">A</span>
+              <span className="absolute inset-0 grid place-items-center font-display text-lg font-bold text-obsidian">
+                A
+              </span>
             </div>
+
             <div className="leading-tight">
-              <div className="font-display text-xl tracking-wide text-ivory">AURUM</div>
-              <div className="eyebrow text-[9px]">Global Metals</div>
+              <div className="font-display text-xl tracking-wide text-ivory">AQVEST</div>
+              <div className="eyebrow text-[9px]">TRADING LIMITED</div>
             </div>
           </Link>
 
@@ -79,8 +76,8 @@ export function SiteHeader() {
                 <div
                   key={item.label}
                   className="relative"
-                  onMouseEnter={() => setMega(true)}
-                  onMouseLeave={() => setMega(false)}
+                  onMouseEnter={() => setMegaOpen(true)}
+                  onMouseLeave={() => setMegaOpen(false)}
                 >
                   <Link
                     to={item.to}
@@ -89,8 +86,9 @@ export function SiteHeader() {
                   >
                     {item.label} <ChevronDown className="h-3 w-3" />
                   </Link>
+
                   <AnimatePresence>
-                    {mega && (
+                    {megaOpen && (
                       <motion.div
                         initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -128,27 +126,6 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <div className="relative">
-              <button
-                onClick={() => setLangOpen((v) => !v)}
-                className="flex items-center gap-1 border border-gold/20 px-3 py-2 text-[11px] tracking-[0.2em] uppercase text-ivory/70 hover:text-gold"
-              >
-                <Globe className="h-3 w-3" /> {lang}
-              </button>
-              {langOpen && (
-                <div className="glass-panel absolute right-0 top-full mt-2 w-28 py-1">
-                  {["EN", "FR", "DE", "AR", "ZH"].map((l) => (
-                    <button
-                      key={l}
-                      onClick={() => { setLang(l); setLangOpen(false); }}
-                      className="block w-full px-3 py-1.5 text-left text-xs text-ivory/80 hover:bg-gold/10 hover:text-gold"
-                    >
-                      {l}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
             <Link
               to="/contact"
               className="bg-gold-gradient px-5 py-3 text-[11px] font-medium tracking-[0.24em] uppercase text-obsidian transition hover:opacity-90"
@@ -172,11 +149,16 @@ export function SiteHeader() {
             className="fixed inset-0 z-50 min-h-dvh overflow-y-auto overscroll-contain bg-black lg:hidden"
           >
             <div className="container-luxury flex h-20 items-center justify-between">
-              <span className="font-display text-xl text-ivory">AURUM</span>
-              <button onClick={() => setOpen(false)} className="text-ivory">
+              <span className="font-display text-xl text-ivory">AQVEST</span>
+              <button
+                onClick={() => setOpen(false)}
+                className="text-ivory"
+                aria-label="Close menu"
+              >
                 <X className="h-6 w-6" />
               </button>
             </div>
+
             <nav className="relative z-10 flex min-h-[calc(100dvh-5rem)] w-full flex-col bg-black px-5 pb-8 pt-2">
               {NAV.map((n) => (
                 <Link
@@ -195,3 +177,4 @@ export function SiteHeader() {
     </header>
   );
 }
+
