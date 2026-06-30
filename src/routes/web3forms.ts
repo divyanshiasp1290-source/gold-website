@@ -1,2 +1,2 @@
-export const WEB3FORMS_ACCESS_KEY = "d28076b8-dc65-4431-af42-2d4365aa5c48";
+export const WEB3FORMS_ACCESS_KEY = "26f25826-b531-44f4-8cc9-fed88c35d75e";
 
